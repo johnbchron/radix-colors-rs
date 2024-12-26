@@ -15,6 +15,8 @@ enum ParsedColor {
 pub fn generate_color_constants(input: TokenStream) -> TokenStream {
   // Parse the input as a string literal containing the file path
   let file_path = parse_macro_input!(input as LitStr).value();
+  let file_path =
+    std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR")).join(file_path);
 
   // Read the JSON file
   let json_content =
