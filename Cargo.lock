@@ -33,13 +33,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "radix-colors"
-version = "0.1.0"
-dependencies = [
- "radix-colors-derive",
-]
-
-[[package]]
 name = "radix-colors-derive"
 version = "0.1.2"
 dependencies = [
@@ -47,6 +40,13 @@ dependencies = [
  "quote",
  "serde_json",
  "syn 1.0.109",
+]
+
+[[package]]
+name = "radix-colors-rs"
+version = "0.1.0"
+dependencies = [
+ "radix-colors-derive",
 ]
 
 [[package]]

@@ -1,4 +1,4 @@
 
 [workspace]
 resolver = "3"
-members = ["radix-colors", "radix-colors-derive"]
+members = ["radix-colors-rs", "radix-colors-derive"]
