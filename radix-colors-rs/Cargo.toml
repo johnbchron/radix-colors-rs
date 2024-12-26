@@ -1,6 +1,6 @@
 [package]
 name = "radix-colors-rs"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "The Radix UI Colors palettes expressed in Rust constants."
 license = "MIT"

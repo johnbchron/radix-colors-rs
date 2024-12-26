@@ -1,5 +1,5 @@
-//! `radix-colors` is a library that provides color constants from the Radix UI
-//! Colors library.
+//! `radix-colors-rs` is a library that provides color constants from the Radix
+//! UI Colors library.
 //!
 //! All constant names are generated from the palette and color names in the
 //! JSON file. Having all the constants loose like this is great for
