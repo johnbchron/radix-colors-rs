@@ -8,4 +8,4 @@ repository = "https://github.com/johnbchron/radix-colors-rs"
 readme = "../README.md"
 
 [dependencies]
-radix-colors-derive = { path = "../radix-colors-derive", version = "0.1.0" }
+radix-colors-derive = { path = "../radix-colors-derive", version = "0.1.2" }

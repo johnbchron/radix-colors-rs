@@ -1,4 +1,4 @@
-use std::fs;
+#![feature(proc_macro_expand)]
 
 use proc_macro::TokenStream;
 use quote::quote;
@@ -13,18 +13,13 @@ enum ParsedColor {
 
 #[proc_macro]
 pub fn generate_color_constants(input: TokenStream) -> TokenStream {
-  // Parse the input as a string literal containing the file path
-  let file_path = parse_macro_input!(input as LitStr).value();
-  let file_path =
-    std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR")).join(file_path);
+  let input = input.expand_expr().expect("Failed to expand input");
 
-  // Read the JSON file
-  let json_content =
-    fs::read_to_string(file_path).expect("Failed to read color constants file");
+  let str_literal = parse_macro_input!(input as LitStr).value();
 
   // Parse the JSON content
   let colors: Value =
-    serde_json::from_str(&json_content).expect("Failed to parse JSON content");
+    serde_json::from_str(&str_literal).expect("Failed to parse JSON content");
 
   // Generate the color structs and implementations
   let mut color_tokens = quote! {};

@@ -12,4 +12,4 @@
 //!
 //! Regular colors, alpha colors, and P3 colors are given separate types.
 
-radix_colors_derive::generate_color_constants!("./colors.json");
+radix_colors_derive::generate_color_constants!(include_str!("../colors.json"));
